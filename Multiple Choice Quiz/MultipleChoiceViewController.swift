@@ -8,6 +8,6 @@
 
 import UIKit
 
-class MultipleChoiceViewController: NSObject {
+class MultipleChoiceViewController: UIViewController {
 
 }

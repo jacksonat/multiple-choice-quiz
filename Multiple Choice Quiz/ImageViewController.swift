@@ -8,6 +8,6 @@
 
 import UIKit
 
-class ImageViewController: NSObject {
+class ImageViewController: UIViewController {
 
 }

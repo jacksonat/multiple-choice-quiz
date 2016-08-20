@@ -48,10 +48,10 @@
             </objects>
             <point key="canvasLocation" x="-223" y="1"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="fdU-Kp-STy">
             <objects>
-                <viewController storyboardIdentifier="settingsViewController" id="NlH-t7-pbb" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="settingsViewController" id="NlH-t7-pbb" customClass="SettingsViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="QZ9-YS-WIh"/>
                         <viewControllerLayoutGuide type="bottom" id="CpG-G5-wcj"/>
@@ -66,10 +66,10 @@
             </objects>
             <point key="canvasLocation" x="439" y="1"/>
         </scene>
-        <!--View Controller-->
+        <!--Multiple Choice View Controller-->
         <scene sceneID="MuA-gE-NIQ">
             <objects>
-                <viewController storyboardIdentifier="multipleChoiceViewController" id="3YA-ap-SVK" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="multipleChoiceViewController" id="3YA-ap-SVK" customClass="MultipleChoiceViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aaI-Y9-dUM"/>
                         <viewControllerLayoutGuide type="bottom" id="pxd-rf-pKD"/>
@@ -84,10 +84,10 @@
             </objects>
             <point key="canvasLocation" x="1123" y="-1002"/>
         </scene>
-        <!--View Controller-->
+        <!--Right Or Wrong View Controller-->
         <scene sceneID="SVj-iH-eoM">
             <objects>
-                <viewController storyboardIdentifier="rightOrWrongViewController" id="LIe-DF-FMA" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightOrWrongViewController" id="LIe-DF-FMA" customClass="RightOrWrongViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xeu-S8-pXZ"/>
                         <viewControllerLayoutGuide type="bottom" id="xOB-Vp-cpr"/>
@@ -102,10 +102,10 @@
             </objects>
             <point key="canvasLocation" x="1123" y="-296"/>
         </scene>
-        <!--View Controller-->
+        <!--Image View Controller-->
         <scene sceneID="E5N-Wq-faB">
             <objects>
-                <viewController id="6hZ-ID-N0w" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imageViewController" id="6hZ-ID-N0w" customClass="ImageViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R1o-bn-eTM"/>
                         <viewControllerLayoutGuide type="bottom" id="KMs-J0-26i"/>
@@ -120,10 +120,10 @@
             </objects>
             <point key="canvasLocation" x="1127" y="444"/>
         </scene>
-        <!--View Controller-->
+        <!--Input View Controller-->
         <scene sceneID="03a-1W-Dhm">
             <objects>
-                <viewController id="yqe-XO-KO9" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inputViewController" id="yqe-XO-KO9" customClass="InputViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cv7-rp-wbU"/>
                         <viewControllerLayoutGuide type="bottom" id="ero-4l-nk2"/>
