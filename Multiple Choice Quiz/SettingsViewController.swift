@@ -10,19 +10,50 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    
     @IBOutlet var gameModeButtons: [UIView]!
     
-    @IBAction func gameModeButtonHandler(sender: AnyObject) {
+    @IBAction func gameModeButtonHandler(sender: UIButton) {
+        
+        for button in gameModeButtons {
+        
+            if sender != button {
+            
+                // Set the unselected buttons to transparent
+                button.alpha = 0.7
+            
+            } else {
+            
+                button.alpha = 1.0
+                
+                gameMode = button.tag
+            
+            }
+        
+        }
+        
     }
     
     @IBAction func playButtonHandler(sender: AnyObject) {
     }
     
+    var gameMode = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        for (index, button) in gameModeButtons.enumerate() {
+        
+            button.tag = index
+            
+            // set the multiple choice as the default selection, so ignore it in the alpha reduction
+            if button.tag != 0 {
+            
+                button.alpha = 0.7
+            
+            }
+        
+        }
         
     }
     
