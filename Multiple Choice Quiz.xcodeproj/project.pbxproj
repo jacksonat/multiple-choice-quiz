@@ -12,6 +12,11 @@
 		DB6C81171D68100A003C0E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C81151D68100A003C0E3D /* Main.storyboard */; };
 		DB6C81191D68100A003C0E3D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DB6C81181D68100A003C0E3D /* Assets.xcassets */; };
 		DB6C811C1D68100A003C0E3D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C811A1D68100A003C0E3D /* LaunchScreen.storyboard */; };
+		DB6C81241D6818C3003C0E3D /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81231D6818C3003C0E3D /* SettingsViewController.swift */; };
+		DB6C81261D6818DA003C0E3D /* MultipleChoiceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81251D6818DA003C0E3D /* MultipleChoiceViewController.swift */; };
+		DB6C81281D6818EB003C0E3D /* RightOrWrongViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81271D6818EB003C0E3D /* RightOrWrongViewController.swift */; };
+		DB6C812A1D681917003C0E3D /* ImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81291D681917003C0E3D /* ImageViewController.swift */; };
+		DB6C812C1D681924003C0E3D /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C812B1D681924003C0E3D /* InputViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +27,11 @@
 		DB6C81181D68100A003C0E3D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DB6C811B1D68100A003C0E3D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DB6C811D1D68100A003C0E3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DB6C81231D6818C3003C0E3D /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		DB6C81251D6818DA003C0E3D /* MultipleChoiceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultipleChoiceViewController.swift; sourceTree = "<group>"; };
+		DB6C81271D6818EB003C0E3D /* RightOrWrongViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightOrWrongViewController.swift; sourceTree = "<group>"; };
+		DB6C81291D681917003C0E3D /* ImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewController.swift; sourceTree = "<group>"; };
+		DB6C812B1D681924003C0E3D /* InputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,11 @@
 				DB6C81111D68100A003C0E3D /* AppDelegate.swift */,
 				DB6C81131D68100A003C0E3D /* ViewController.swift */,
 				DB6C81151D68100A003C0E3D /* Main.storyboard */,
+				DB6C81231D6818C3003C0E3D /* SettingsViewController.swift */,
+				DB6C81251D6818DA003C0E3D /* MultipleChoiceViewController.swift */,
+				DB6C81271D6818EB003C0E3D /* RightOrWrongViewController.swift */,
+				DB6C81291D681917003C0E3D /* ImageViewController.swift */,
+				DB6C812B1D681924003C0E3D /* InputViewController.swift */,
 				DB6C81181D68100A003C0E3D /* Assets.xcassets */,
 				DB6C811A1D68100A003C0E3D /* LaunchScreen.storyboard */,
 				DB6C811D1D68100A003C0E3D /* Info.plist */,
@@ -137,6 +152,11 @@
 			files = (
 				DB6C81141D68100A003C0E3D /* ViewController.swift in Sources */,
 				DB6C81121D68100A003C0E3D /* AppDelegate.swift in Sources */,
+				DB6C81241D6818C3003C0E3D /* SettingsViewController.swift in Sources */,
+				DB6C812C1D681924003C0E3D /* InputViewController.swift in Sources */,
+				DB6C81261D6818DA003C0E3D /* MultipleChoiceViewController.swift in Sources */,
+				DB6C812A1D681917003C0E3D /* ImageViewController.swift in Sources */,
+				DB6C81281D6818EB003C0E3D /* RightOrWrongViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
