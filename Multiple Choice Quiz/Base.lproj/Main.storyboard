@@ -79,30 +79,10 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="playButtonHandler:" destination="NlH-t7-pbb" eventType="touchUpInside" id="ySX-bK-BDV"/>
+                                </connections>
                             </button>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7I-pD-rok">
-                                <rect key="frame" x="0.0" y="72" width="600" height="111"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-Ti-Vpk">
-                                        <rect key="frame" x="150" y="26" width="300" height="60"/>
-                                        <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="Fwi-iI-Cqw"/>
-                                            <constraint firstAttribute="width" constant="300" id="WvH-Mk-gAu"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
-                                        <state key="normal" title="Multiple choice">
-                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </state>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstItem="0ju-Ti-Vpk" firstAttribute="centerY" secondItem="q7I-pD-rok" secondAttribute="centerY" id="Q3j-K2-FmS"/>
-                                    <constraint firstItem="0ju-Ti-Vpk" firstAttribute="centerX" secondItem="q7I-pD-rok" secondAttribute="centerX" id="qDD-nO-cMv"/>
-                                </constraints>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bcm-Fz-Dhz">
                                 <rect key="frame" x="0.0" y="191" width="600" height="111"/>
                                 <subviews>
@@ -118,6 +98,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHandler:" destination="NlH-t7-pbb" eventType="touchUpInside" id="pck-Uv-mNZ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -141,6 +124,9 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHandler:" destination="NlH-t7-pbb" eventType="touchUpInside" id="EiR-V8-oUv"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -164,12 +150,41 @@
                                             <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                             <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHandler:" destination="NlH-t7-pbb" eventType="touchUpInside" id="y4d-V2-YGr"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="jDh-2F-iYs" firstAttribute="centerX" secondItem="lgO-mF-mhb" secondAttribute="centerX" id="8qK-Hx-QfJ"/>
                                     <constraint firstItem="jDh-2F-iYs" firstAttribute="centerY" secondItem="lgO-mF-mhb" secondAttribute="centerY" id="93Y-ov-TMJ"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="q7I-pD-rok">
+                                <rect key="frame" x="0.0" y="72" width="600" height="111"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-Ti-Vpk">
+                                        <rect key="frame" x="150" y="26" width="300" height="60"/>
+                                        <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="Fwi-iI-Cqw"/>
+                                            <constraint firstAttribute="width" constant="300" id="WvH-Mk-gAu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                        <state key="normal" title="Multiple choice">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="titleShadowColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="gameModeButtonHandler:" destination="NlH-t7-pbb" eventType="touchUpInside" id="fw5-i4-ZIk"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="0ju-Ti-Vpk" firstAttribute="centerY" secondItem="q7I-pD-rok" secondAttribute="centerY" id="Q3j-K2-FmS"/>
+                                    <constraint firstItem="0ju-Ti-Vpk" firstAttribute="centerX" secondItem="q7I-pD-rok" secondAttribute="centerX" id="qDD-nO-cMv"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -196,6 +211,12 @@
                             <constraint firstItem="bcm-Fz-Dhz" firstAttribute="leading" secondItem="v04-YX-LKm" secondAttribute="leadingMargin" constant="-20" id="w7x-78-aHY"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outletCollection property="gameModeButtons" destination="PhJ-Yv-2fx" collectionClass="NSMutableArray" id="2m3-AS-5Cv"/>
+                        <outletCollection property="gameModeButtons" destination="hHk-xI-ck2" collectionClass="NSMutableArray" id="PiH-Zu-JBB"/>
+                        <outletCollection property="gameModeButtons" destination="jDh-2F-iYs" collectionClass="NSMutableArray" id="K7O-84-i8g"/>
+                        <outletCollection property="gameModeButtons" destination="0ju-Ti-Vpk" collectionClass="NSMutableArray" id="EV5-jy-fgH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drc-iq-gWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

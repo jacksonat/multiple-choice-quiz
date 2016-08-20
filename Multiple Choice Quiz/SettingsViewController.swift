@@ -10,6 +10,15 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    
+    @IBOutlet var gameModeButtons: [UIView]!
+    
+    @IBAction func gameModeButtonHandler(sender: AnyObject) {
+    }
+    
+    @IBAction func playButtonHandler(sender: AnyObject) {
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
