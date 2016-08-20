@@ -10,4 +10,15 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
+    // Add view did load in all these view controllers
+    
+    // Restore navigation bar that was removed from the root view controller?
+    override func viewWillAppear(animated: Bool) {
+        
+        super.viewWillAppear(true)
+        
+        navigationController?.setNavigationBarHidden(false, animated: false)
+        
+    }
+    
 }
