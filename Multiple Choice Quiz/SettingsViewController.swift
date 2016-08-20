@@ -10,9 +10,14 @@ import UIKit
 
 class SettingsViewController: UIViewController {
 
-    // Add view did load in all these view controllers
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        
+    }
     
-    // Restore navigation bar that was removed from the root view controller?
+    // Restore navigation bar
     override func viewWillAppear(animated: Bool) {
         
         super.viewWillAppear(true)
@@ -20,5 +25,11 @@ class SettingsViewController: UIViewController {
         navigationController?.setNavigationBarHidden(false, animated: false)
         
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
     
 }
