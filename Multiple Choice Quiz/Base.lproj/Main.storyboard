@@ -212,20 +212,20 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outletCollection property="gameModeButtons" destination="PhJ-Yv-2fx" collectionClass="NSMutableArray" id="2m3-AS-5Cv"/>
-                        <outletCollection property="gameModeButtons" destination="hHk-xI-ck2" collectionClass="NSMutableArray" id="PiH-Zu-JBB"/>
-                        <outletCollection property="gameModeButtons" destination="jDh-2F-iYs" collectionClass="NSMutableArray" id="K7O-84-i8g"/>
-                        <outletCollection property="gameModeButtons" destination="0ju-Ti-Vpk" collectionClass="NSMutableArray" id="EV5-jy-fgH"/>
+                        <outletCollection property="gameModeButtons" destination="0ju-Ti-Vpk" collectionClass="NSMutableArray" id="Bbp-dS-Sk8"/>
+                        <outletCollection property="gameModeButtons" destination="PhJ-Yv-2fx" collectionClass="NSMutableArray" id="NhV-Vh-Rxj"/>
+                        <outletCollection property="gameModeButtons" destination="hHk-xI-ck2" collectionClass="NSMutableArray" id="ESi-Yh-7R7"/>
+                        <outletCollection property="gameModeButtons" destination="jDh-2F-iYs" collectionClass="NSMutableArray" id="ASG-GB-qKj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="drc-iq-gWw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="439" y="1"/>
         </scene>
-        <!--Multiple Choice View Controller-->
+        <!--Multiple Choice-->
         <scene sceneID="MuA-gE-NIQ">
             <objects>
-                <viewController storyboardIdentifier="multipleChoiceViewController" id="3YA-ap-SVK" customClass="MultipleChoiceViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="multipleChoiceViewController" title="Multiple Choice" id="3YA-ap-SVK" customClass="MultipleChoiceViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="aaI-Y9-dUM"/>
                         <viewControllerLayoutGuide type="bottom" id="pxd-rf-pKD"/>
@@ -240,10 +240,10 @@
             </objects>
             <point key="canvasLocation" x="1123" y="-1002"/>
         </scene>
-        <!--Right Or Wrong View Controller-->
+        <!--Right or Wrong-->
         <scene sceneID="SVj-iH-eoM">
             <objects>
-                <viewController storyboardIdentifier="rightOrWrongViewController" id="LIe-DF-FMA" customClass="RightOrWrongViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="rightOrWrongViewController" title="Right or Wrong" id="LIe-DF-FMA" customClass="RightOrWrongViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xeu-S8-pXZ"/>
                         <viewControllerLayoutGuide type="bottom" id="xOB-Vp-cpr"/>
@@ -258,10 +258,10 @@
             </objects>
             <point key="canvasLocation" x="1123" y="-296"/>
         </scene>
-        <!--Image View Controller-->
+        <!--Image Quiz-->
         <scene sceneID="E5N-Wq-faB">
             <objects>
-                <viewController storyboardIdentifier="imageViewController" id="6hZ-ID-N0w" customClass="ImageViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="imageViewController" title="Image Quiz" id="6hZ-ID-N0w" customClass="ImageViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="R1o-bn-eTM"/>
                         <viewControllerLayoutGuide type="bottom" id="KMs-J0-26i"/>
@@ -276,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="1127" y="444"/>
         </scene>
-        <!--Input View Controller-->
+        <!--Single Choice-->
         <scene sceneID="03a-1W-Dhm">
             <objects>
-                <viewController storyboardIdentifier="inputViewController" id="yqe-XO-KO9" customClass="InputViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="inputViewController" title="Single Choice" id="yqe-XO-KO9" customClass="InputViewController" customModule="Multiple_Choice_Quiz" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cv7-rp-wbU"/>
                         <viewControllerLayoutGuide type="bottom" id="ero-4l-nk2"/>

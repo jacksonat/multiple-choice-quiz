@@ -31,9 +31,44 @@ class SettingsViewController: UIViewController {
         
         }
         
+        print(gameMode)
+        
     }
     
     @IBAction func playButtonHandler(sender: AnyObject) {
+        
+        var vc: UIViewController?
+        
+        switch gameMode {
+        
+        case 0:
+            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("multipleChoiceViewController") as! MultipleChoiceViewController
+            
+        case 1:
+            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("rightOrWrongViewController") as! RightOrWrongViewController
+            
+        case 2:
+            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("imageViewController") as! ImageViewController
+            
+        case 3:
+            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("inputViewController") as! InputViewController
+            
+        default:
+            
+            break
+            
+        }
+        
+        if vc != 0 {
+        
+            navigationController?.pushViewController(vc!, animated: true)
+        
+        }
+        
     }
     
     var gameMode = 0
