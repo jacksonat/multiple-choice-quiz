@@ -16,6 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        // Change navigation bar default color to custom color
+        
+        let myColor = UIColor(red: 145/255, green: 197/255, blue: 201/255, alpha: 1)
+        
+        UINavigationBar.appearance().tintColor = myColor
+        
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : myColor]
+        
+        // UINavigationBar.appearance().barTintColor = UIColor(red: 234.0/255.0, green: 46.0/255.0, blue: 73.0/255.0, alpha: 1.0)
+        
         return true
     }
 

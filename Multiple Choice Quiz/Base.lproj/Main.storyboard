@@ -172,7 +172,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0ju-Ti-Vpk">
                                         <rect key="frame" x="150" y="26" width="300" height="60"/>
-                                        <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" red="0.62745098039215685" green="0.8864012846517918" blue="0.90588235294117647" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="Fwi-iI-Cqw"/>
                                             <constraint firstAttribute="width" constant="300" id="WvH-Mk-gAu"/>
@@ -339,6 +339,7 @@
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="LWn-4o-OMU" firstAttribute="top" secondItem="OVF-wJ-nng" secondAttribute="bottom" constant="8" id="5Nv-rD-QI0"/>
                             <constraint firstItem="OVF-wJ-nng" firstAttribute="height" secondItem="9i1-zE-5L7" secondAttribute="height" id="6sD-rp-QMr"/>
