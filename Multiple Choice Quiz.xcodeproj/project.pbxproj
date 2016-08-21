@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DB4D4C521D699FCD00274E5F /* MCQuestions.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C511D699FCD00274E5F /* MCQuestions.plist */; };
 		DB6C81121D68100A003C0E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81111D68100A003C0E3D /* AppDelegate.swift */; };
 		DB6C81141D68100A003C0E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81131D68100A003C0E3D /* ViewController.swift */; };
 		DB6C81171D68100A003C0E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C81151D68100A003C0E3D /* Main.storyboard */; };
@@ -20,6 +21,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DB4D4C511D699FCD00274E5F /* MCQuestions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MCQuestions.plist; sourceTree = "<group>"; };
 		DB6C810E1D68100A003C0E3D /* Multiple Choice Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiple Choice Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6C81111D68100A003C0E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6C81131D68100A003C0E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,6 +47,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DB4D4C531D69A43000274E5F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				DB4D4C511D699FCD00274E5F /* MCQuestions.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
 		DB6C81051D681009003C0E3D = {
 			isa = PBXGroup;
 			children = (
@@ -64,6 +74,7 @@
 		DB6C81101D68100A003C0E3D /* Multiple Choice Quiz */ = {
 			isa = PBXGroup;
 			children = (
+				DB4D4C531D69A43000274E5F /* Resources */,
 				DB6C81111D68100A003C0E3D /* AppDelegate.swift */,
 				DB6C81131D68100A003C0E3D /* ViewController.swift */,
 				DB6C81151D68100A003C0E3D /* Main.storyboard */,
@@ -139,6 +150,7 @@
 			files = (
 				DB6C811C1D68100A003C0E3D /* LaunchScreen.storyboard in Resources */,
 				DB6C81191D68100A003C0E3D /* Assets.xcassets in Resources */,
+				DB4D4C521D699FCD00274E5F /* MCQuestions.plist in Resources */,
 				DB6C81171D68100A003C0E3D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +320,7 @@
 				DB6C81221D68100A003C0E3D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

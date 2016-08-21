@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Questions</key>
+	<array>
+		<dict>
+			<key>Question</key>
+			<string>&quot;What is the capital of the United States?&quot;</string>
+			<key>CorrectAnswer</key>
+			<string>&quot;Washington D.C&quot;</string>
+			<key>Answers</key>
+			<array>
+				<string>&quot;Seattle&quot;</string>
+				<string>&quot;New York&quot;</string>
+				<string>&quot;Los Angeles&quot;</string>
+				<string>&quot;Washington D.C.&quot;</string>
+			</array>
+		</dict>
+		<dict>
+			<key>Answers</key>
+			<array>
+				<string>&quot;Washington D.C.&quot;</string>
+				<string>&quot;London&quot;</string>
+				<string>&quot;Munich&quot;</string>
+				<string>&quot;Paris&quot;</string>
+			</array>
+			<key>CorrectAnswer</key>
+			<string>&quot;London&quot;</string>
+			<key>Question</key>
+			<string>&quot;What is the capital of the United Kingdom?&quot;</string>
+		</dict>
+	</array>
+</dict>
+</plist>
