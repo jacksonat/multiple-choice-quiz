@@ -261,9 +261,21 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWn-4o-OMU">
                                 <rect key="frame" x="20" y="532" width="560" height="48"/>
-                                <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="f0V-Uz-3sm">
+                                        <rect key="frame" x="2" y="23" width="558" height="2"/>
+                                        <color key="tintColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="2" id="mcP-H5-88j"/>
+                                        </constraints>
+                                    </progressView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="f0V-Uz-3sm" secondAttribute="trailing" id="0yH-xK-pU5"/>
+                                    <constraint firstItem="f0V-Uz-3sm" firstAttribute="leading" secondItem="LWn-4o-OMU" secondAttribute="leading" constant="2" id="IR6-s5-J1g"/>
                                     <constraint firstAttribute="height" constant="48" id="OsP-z8-78L"/>
+                                    <constraint firstItem="f0V-Uz-3sm" firstAttribute="centerY" secondItem="LWn-4o-OMU" secondAttribute="centerY" id="tII-eP-rw2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-wJ-nng">
