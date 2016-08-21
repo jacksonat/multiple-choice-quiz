@@ -51,11 +51,11 @@ class SettingsViewController: UIViewController {
             
         case 2:
             
-            vc = storyboard?.instantiateViewControllerWithIdentifier("imageViewController") as! ImageViewController
-            
+            vc = storyboard?.instantiateViewControllerWithIdentifier("inputViewController") as! InputViewController
+        
         case 3:
             
-            vc = storyboard?.instantiateViewControllerWithIdentifier("inputViewController") as! InputViewController
+            vc = storyboard?.instantiateViewControllerWithIdentifier("imageViewController") as! ImageViewController
             
         default:
             
