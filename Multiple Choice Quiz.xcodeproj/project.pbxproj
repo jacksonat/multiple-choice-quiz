@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		DB4D4C521D699FCD00274E5F /* MCQuestions.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C511D699FCD00274E5F /* MCQuestions.plist */; };
+		DB4D4C571D69A61800274E5F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C561D69A61800274E5F /* Configuration.swift */; };
 		DB6C81121D68100A003C0E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81111D68100A003C0E3D /* AppDelegate.swift */; };
 		DB6C81141D68100A003C0E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81131D68100A003C0E3D /* ViewController.swift */; };
 		DB6C81171D68100A003C0E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C81151D68100A003C0E3D /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 
 /* Begin PBXFileReference section */
 		DB4D4C511D699FCD00274E5F /* MCQuestions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MCQuestions.plist; sourceTree = "<group>"; };
+		DB4D4C561D69A61800274E5F /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DB6C810E1D68100A003C0E3D /* Multiple Choice Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiple Choice Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6C81111D68100A003C0E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6C81131D68100A003C0E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,6 +88,7 @@
 				DB6C81181D68100A003C0E3D /* Assets.xcassets */,
 				DB6C811A1D68100A003C0E3D /* LaunchScreen.storyboard */,
 				DB6C811D1D68100A003C0E3D /* Info.plist */,
+				DB4D4C561D69A61800274E5F /* Configuration.swift */,
 			);
 			path = "Multiple Choice Quiz";
 			sourceTree = "<group>";
@@ -168,6 +171,7 @@
 				DB6C812C1D681924003C0E3D /* InputViewController.swift in Sources */,
 				DB6C81261D6818DA003C0E3D /* MultipleChoiceViewController.swift in Sources */,
 				DB6C812A1D681917003C0E3D /* ImageViewController.swift in Sources */,
+				DB4D4C571D69A61800274E5F /* Configuration.swift in Sources */,
 				DB6C81281D6818EB003C0E3D /* RightOrWrongViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
