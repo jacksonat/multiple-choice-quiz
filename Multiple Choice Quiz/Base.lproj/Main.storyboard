@@ -240,20 +240,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9i1-zE-5L7">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9i1-zE-5L7">
                                 <rect key="frame" x="20" y="72" width="560" height="222"/>
                                 <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LWn-4o-OMU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWn-4o-OMU">
                                 <rect key="frame" x="20" y="532" width="560" height="48"/>
                                 <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="48" id="OsP-z8-78L"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-wJ-nng">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OVF-wJ-nng">
                                 <rect key="frame" x="20" y="302" width="560" height="222"/>
                                 <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LWn-4o-OMU" firstAttribute="top" secondItem="OVF-wJ-nng" secondAttribute="bottom" constant="8" id="5Nv-rD-QI0"/>
+                            <constraint firstItem="OVF-wJ-nng" firstAttribute="height" secondItem="9i1-zE-5L7" secondAttribute="height" id="6sD-rp-QMr"/>
+                            <constraint firstItem="9i1-zE-5L7" firstAttribute="top" secondItem="aaI-Y9-dUM" secondAttribute="bottom" constant="8" id="6uj-Nk-eD3"/>
+                            <constraint firstItem="pxd-rf-pKD" firstAttribute="top" secondItem="LWn-4o-OMU" secondAttribute="bottom" constant="20" id="GLX-xe-hQH"/>
+                            <constraint firstItem="LWn-4o-OMU" firstAttribute="trailing" secondItem="yhl-7u-me5" secondAttribute="trailingMargin" id="JJZ-u7-n6o"/>
+                            <constraint firstItem="OVF-wJ-nng" firstAttribute="top" secondItem="9i1-zE-5L7" secondAttribute="bottom" constant="8" id="OHe-DD-xf7"/>
+                            <constraint firstItem="9i1-zE-5L7" firstAttribute="trailing" secondItem="yhl-7u-me5" secondAttribute="trailingMargin" id="Okt-5N-LMZ"/>
+                            <constraint firstItem="LWn-4o-OMU" firstAttribute="leading" secondItem="yhl-7u-me5" secondAttribute="leadingMargin" id="Tdl-Qj-E3l"/>
+                            <constraint firstItem="9i1-zE-5L7" firstAttribute="leading" secondItem="yhl-7u-me5" secondAttribute="leadingMargin" id="f32-b1-3uu"/>
+                            <constraint firstItem="OVF-wJ-nng" firstAttribute="leading" secondItem="yhl-7u-me5" secondAttribute="leadingMargin" id="jCe-8k-6HM"/>
+                            <constraint firstItem="OVF-wJ-nng" firstAttribute="trailing" secondItem="yhl-7u-me5" secondAttribute="trailingMargin" id="rhB-bw-la6"/>
+                        </constraints>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </viewController>
