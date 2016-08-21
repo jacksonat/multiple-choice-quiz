@@ -242,7 +242,21 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9i1-zE-5L7">
                                 <rect key="frame" x="20" y="72" width="560" height="222"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiT-eB-IKI">
+                                        <rect key="frame" x="8" y="8" width="544" height="206"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fiT-eB-IKI" firstAttribute="leading" secondItem="9i1-zE-5L7" secondAttribute="leading" constant="8" id="8i2-2q-SQg"/>
+                                    <constraint firstAttribute="trailing" secondItem="fiT-eB-IKI" secondAttribute="trailing" constant="8" id="cOC-d2-eDu"/>
+                                    <constraint firstItem="fiT-eB-IKI" firstAttribute="top" secondItem="9i1-zE-5L7" secondAttribute="top" constant="8" id="gBN-sI-8L5"/>
+                                    <constraint firstAttribute="bottom" secondItem="fiT-eB-IKI" secondAttribute="bottom" constant="8" id="gEJ-de-AaH"/>
+                                </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LWn-4o-OMU">
                                 <rect key="frame" x="20" y="532" width="560" height="48"/>
