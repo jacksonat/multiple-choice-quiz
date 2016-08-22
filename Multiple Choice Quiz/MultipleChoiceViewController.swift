@@ -10,6 +10,7 @@ import UIKit
 
 class MultipleChoiceViewController: UIViewController {
 
+    var correctAnswer: Int = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     
@@ -18,68 +19,57 @@ class MultipleChoiceViewController: UIViewController {
     
     @IBAction func answerButtonHandler(sender: UIButton) {
     
-        //if sender.index = answer
-        // light up green
-        //else light up red
-        
-        // pop the Questions array
-        
-        // timer of 3 seconds
-        // call next Question
-        
-        
-        // Change from master to make answer check on an integer associated with the button tag
         if sender.tag == correctAnswer {
-        
+            
             print("Correct")
-        
+            
         } else {
-        
+            
             print("Incorrect")
-        
+            
         }
-    
+        
     }
-    
-    // Check answer by array index rather than text value
-    var correctAnswer = 2
-    
-    var answers = ["1980", "1972", "2016", "1990"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
  
-        titlesForButtons()
-    
+        setQuestion()
+        
     }
     
-    // func setQuestion() {
-    
+    func setQuestion() {
+        
         // var questionToAsk = Questions * random
         // titlesforButtons() {
-    
-            // question.text = question
-            // cycle through array for answer labels
-    
-    //    }
-    
-
-    
-   
-    
-    func titlesForButtons() {
-    
-        for (index, button) in answerButtons.enumerate() {
+        
+        // question.text = question
+        // cycle through array for answer labels
+        
+        //    }
+        
+        if QuestionsList.count > 0 {
+        
+            var QNumber = 0
             
-            button.setTitle(answers[index], forState: .Normal)
+            questionLabel.text = QuestionsList[QNumber].Question
             
-        questionLabel.text = "What year is it?"
+            for i in 0..<answerButtons.count {
             
+                answerButtons[i].setTitle(QuestionsList[QNumber].Answers![i], forState: UIControlState.Normal)
+                
+            correctAnswer = QuestionsList[QNumber].Answer
+            
+            }
+        
+        } else {
+        
+            // Do something at finish
+            print("No more questions")
+        
         }
-
-    
+        
     }
-    
     
 }

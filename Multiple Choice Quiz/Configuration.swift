@@ -21,16 +21,16 @@ struct Question {
     
     var Question: String?
     var Answers: [String]?
-    var Answer: String // Could also be Int if the correct check is to the button array index
+    var Answer: Int // Could also be Int if the correct check is to the button array index
     
 }
 
 var QuestionsList = [
     
-    Question(Question: "What is the capital of the U.K?", Answers: ["London", "Berlin", "New York", "Heathrow"], Answer: "London"),
-    Question(Question: "What is the capital of the United States?", Answers: ["New York", "Los Angeles", "Seattle", "Washington D.C."], Answer: "Washinton D.C."),
-    Question(Question: "What is the capital of France?", Answers: ["Paris", "Nice", "Lyon", "Marseilles"], Answer: "Paris"),
-    Question(Question: "What is the capital of Germany", Answers: ["Frankfurt", "Berlin", "Bonn", "Strasburg"], Answer: "")
+    Question(Question: "What is the capital of the U.K?", Answers: ["London", "Berlin", "New York", "Heathrow"], Answer: 0),
+    Question(Question: "What is the capital of the United States?", Answers: ["New York", "Los Angeles", "Seattle", "Washington D.C."], Answer: 3),
+    Question(Question: "What is the capital of France?", Answers: ["Paris", "Nice", "Lyon", "Marseilles"], Answer: 0),
+    Question(Question: "What is the capital of Germany", Answers: ["Frankfurt", "Berlin", "Bonn", "Strasburg"], Answer: 1)
 
 ]
 
