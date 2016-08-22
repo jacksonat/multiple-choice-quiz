@@ -292,7 +292,7 @@
                                             <action selector="answerButtonHandler:" destination="3YA-ap-SVK" eventType="touchUpInside" id="aur-7z-TUJ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs7-Gn-9rR">
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xs7-Gn-9rR">
                                         <rect key="frame" x="0.0" y="115" width="272" height="99"/>
                                         <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
@@ -303,7 +303,7 @@
                                             <action selector="answerButtonHandler:" destination="3YA-ap-SVK" eventType="touchUpInside" id="H19-0N-Tgf"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-YG-pEb">
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFA-YG-pEb">
                                         <rect key="frame" x="288" y="8" width="272" height="99"/>
                                         <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>
@@ -314,7 +314,7 @@
                                             <action selector="answerButtonHandler:" destination="3YA-ap-SVK" eventType="touchUpInside" id="dxc-kC-dv6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldb-jc-dxf">
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ldb-jc-dxf">
                                         <rect key="frame" x="288" y="115" width="272" height="99"/>
                                         <color key="backgroundColor" red="0.6307234504" green="0.89582192459999999" blue="0.90646701389999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="24"/>

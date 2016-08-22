@@ -27,7 +27,9 @@ class MultipleChoiceViewController: UIViewController {
         // timer of 3 seconds
         // call next Question
         
-        if sender.titleLabel!.text == correctAnswer {
+        
+        // Change from master to make answer check on an integer associated with the button tag
+        if sender.tag == correctAnswer {
         
             print("Correct")
         
@@ -39,7 +41,8 @@ class MultipleChoiceViewController: UIViewController {
     
     }
     
-    var correctAnswer = "2016"
+    // Check answer by array index rather than text value
+    var correctAnswer = 2
     
     var answers = ["1980", "1972", "2016", "1990"]
     
