@@ -12,13 +12,62 @@ class MultipleChoiceViewController: UIViewController {
 
     var correctAnswer: Int = 0
     
+    // var QNumber = 0
+    
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet var answerButtons: [UIButton]!
     
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+        setQuestion()
+        
+    }
+    
+    
     @IBAction func answerButtonHandler(sender: UIButton) {
     
+        checkAnswer(sender)
+        
+    }
+    
+
+    
+    func setQuestion() {
+        
+        if QuestionsList.count > 0 {
+            
+            // Add a randomizer on this
+            var QNumber = 0
+            
+            questionLabel.text = QuestionsList[QNumber].Question
+            
+            for i in 0..<answerButtons.count {
+            
+                answerButtons[i].setTitle(QuestionsList[QNumber].Answers![i], forState: UIControlState.Normal)
+            
+            }
+            
+        // Set the correctAnswer number before popping the question from array
+        correctAnswer = QuestionsList[QNumber].Answer
+            
+        // Remove the asked question from the array
+        QuestionsList.removeAtIndex(QNumber)
+        
+        } else {
+        
+            // Do something at finish
+            print("No more questions")
+        
+        }
+        
+    }
+    
+    func checkAnswer(sender: UIButton) {
+        
         if sender.tag == correctAnswer {
             
             print("Correct")
@@ -29,47 +78,8 @@ class MultipleChoiceViewController: UIViewController {
             
         }
         
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
- 
         setQuestion()
-        
-    }
     
-    func setQuestion() {
-        
-        // var questionToAsk = Questions * random
-        // titlesforButtons() {
-        
-        // question.text = question
-        // cycle through array for answer labels
-        
-        //    }
-        
-        if QuestionsList.count > 0 {
-        
-            var QNumber = 0
-            
-            questionLabel.text = QuestionsList[QNumber].Question
-            
-            for i in 0..<answerButtons.count {
-            
-                answerButtons[i].setTitle(QuestionsList[QNumber].Answers![i], forState: UIControlState.Normal)
-                
-            correctAnswer = QuestionsList[QNumber].Answer
-            
-            }
-        
-        } else {
-        
-            // Do something at finish
-            print("No more questions")
-        
-        }
-        
     }
     
 }

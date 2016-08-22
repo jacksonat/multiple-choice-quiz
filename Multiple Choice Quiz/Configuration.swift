@@ -8,13 +8,6 @@
 
 import Foundation
 
-var helloWorld = "Hello World"
-
-// create an array of dictionaries, with strings as keys and any object as values
-
-// Old code using plist commented out
-//var multipleChoiceArray: Array<[String: AnyObject]>?
-
 // Hard code the questions list here as a struct
 
 struct Question {
