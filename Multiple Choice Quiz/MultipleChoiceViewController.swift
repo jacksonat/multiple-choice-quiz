@@ -18,6 +18,15 @@ class MultipleChoiceViewController: UIViewController {
     
     @IBAction func answerButtonHandler(sender: UIButton) {
     
+        //if sender.index = answer
+        // light up green
+        //else light up red
+        
+        // pop the Questions array
+        
+        // timer of 3 seconds
+        // call next Question
+        
         if sender.titleLabel!.text == correctAnswer {
         
             print("Correct")
@@ -41,6 +50,20 @@ class MultipleChoiceViewController: UIViewController {
         titlesForButtons()
     
     }
+    
+    // func setQuestion() {
+    
+        // var questionToAsk = Questions * random
+        // titlesforButtons() {
+    
+            // question.text = question
+            // cycle through array for answer labels
+    
+    //    }
+    
+
+    
+   
     
     func titlesForButtons() {
     
