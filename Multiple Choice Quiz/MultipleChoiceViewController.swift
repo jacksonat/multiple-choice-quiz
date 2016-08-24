@@ -66,20 +66,20 @@ class MultipleChoiceViewController: UIViewController {
             // Test on randomizer on QuestionsList array
             print("QNumber is \(QNumber), with \(QuestionsList.count) questions left")
             
-            // Check this method
-            //questionLabel.titleLabel!.lineBreakMode = .ByWordWrapping
+            questionLabel.lineBreakMode = .ByWordWrapping
+            
             questionLabel.text = QuestionsList[QNumber].Question
             
-            // Set this out in an enumeration?
-            for i in 0..<answerButtons.count {
+            for (index, button) in answerButtons.enumerate() {
             
-                // Check this method
-                // answerButtons[i].titleLabel!.lineBreakMode = .ByWordWrapping
-                answerButtons[i].setTitle(QuestionsList[QNumber].Answers![i], forState: UIControlState.Normal)
+                button.enabled = true
                 
-                answerButtons[i].enabled = true
-                answerButtons[i].backgroundColor = UIColor(red: 161/255, green: 228/255, blue: 231/255, alpha: 1)
-            
+                button.setTitle(QuestionsList[QNumber].Answers![index], forState: UIControlState.Normal)
+                
+                button.backgroundColor = UIColor(red: 161/255, green: 228/255, blue: 231/255, alpha: 1)
+                
+                button.titleLabel!.lineBreakMode = .ByWordWrapping
+ 
             }
             
         // Set the correctAnswer number before popping the question from array
