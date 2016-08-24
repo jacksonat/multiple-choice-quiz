@@ -10,13 +10,23 @@ import UIKit
 
 class MultipleChoiceViewController: UIViewController {
 
-    var correctAnswer: Int = 0
+    var correctAnswer = Int()  // Initialize the correctAnswer
     
     // var QNumber = 0
     
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet var answerButtons: [UIButton]!
+    
+    
+    @IBOutlet weak var questionButton: UIButton!
+    
+    
+    @IBAction func questionButtonHandler(sender: UIButton) {
+    
+    
+    
+    }
     
     
     override func viewDidLoad() {
@@ -30,6 +40,13 @@ class MultipleChoiceViewController: UIViewController {
     
     @IBAction func answerButtonHandler(sender: UIButton) {
     
+        // Disable buttons after answer selection
+        for button in answerButtons {
+        
+            button.enabled = false
+        
+        }
+        
         checkAnswer(sender)
         
     }
@@ -42,12 +59,18 @@ class MultipleChoiceViewController: UIViewController {
             
             // Add a randomizer on this
             let QNumber = Int(arc4random_uniform(UInt32(QuestionsList.count)))
-            print("QNumber = \(QNumber)")
             
+            // Test on randomizer on QuestionsList array
+            print("QNumber is \(QNumber), with \(QuestionsList.count) questions left")
+            
+            // Check this method
+            //questionLabel.titleLabel!.lineBreakMode = .ByWordWrapping
             questionLabel.text = QuestionsList[QNumber].Question
             
             for i in 0..<answerButtons.count {
             
+                // Check this method
+                // answerButtons[i].titleLabel!.lineBreakMode = .ByWordWrapping
                 answerButtons[i].setTitle(QuestionsList[QNumber].Answers![i], forState: UIControlState.Normal)
             
             }
@@ -56,7 +79,9 @@ class MultipleChoiceViewController: UIViewController {
         correctAnswer = QuestionsList[QNumber].Answer
             
         // Remove the asked question from the array
-        QuestionsList.removeAtIndex(QNumber)
+        QuestionsList.removeAtIndex(QNumber)  // You will need to reload the full array after the end of the game
+            
+            
         
         } else {
         
@@ -79,7 +104,8 @@ class MultipleChoiceViewController: UIViewController {
             
         }
         
-        setQuestion()
+        // this function will be placed into a tap to proceed action handler rather than auto advancing
+        // setQuestion()
     
     }
     
