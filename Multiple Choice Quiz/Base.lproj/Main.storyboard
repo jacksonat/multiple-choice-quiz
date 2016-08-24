@@ -379,6 +379,7 @@
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
+                        <outlet property="progressView" destination="f0V-Uz-3sm" id="YiD-Wu-iLb"/>
                         <outlet property="questionButton" destination="U5n-IM-wV4" id="bdT-Xy-OHp"/>
                         <outlet property="questionLabel" destination="fiT-eB-IKI" id="3P9-ra-u18"/>
                         <outletCollection property="answerButtons" destination="Lz0-U2-N9T" collectionClass="NSMutableArray" id="suY-NM-14r"/>

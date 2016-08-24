@@ -14,13 +14,15 @@ class MultipleChoiceViewController: UIViewController {
     
     // var QNumber = 0
     
+    let initialQuestionCount = QuestionsList.count
+    
     @IBOutlet weak var questionLabel: UILabel!
     
     @IBOutlet var answerButtons: [UIButton]!
     
-    
     @IBOutlet weak var questionButton: UIButton!
     
+    @IBOutlet weak var progressView: UIProgressView!
     
     @IBAction func questionButtonHandler(sender: UIButton) {
     
@@ -32,6 +34,8 @@ class MultipleChoiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        progressView.progress = 0
         
         setQuestion()
         
@@ -47,6 +51,7 @@ class MultipleChoiceViewController: UIViewController {
         
         }
         
+        // Check the answer
         checkAnswer(sender)
         
     }
@@ -56,6 +61,9 @@ class MultipleChoiceViewController: UIViewController {
     func setQuestion() {
         
         if QuestionsList.count > 0 {
+            
+            // increment the progress bar
+            progressView.progress += 1 / Float(initialQuestionCount)
             
             // Disable the question button. (Alertnatively place in viewDidLoad?)
             questionButton.enabled = false
@@ -116,9 +124,6 @@ class MultipleChoiceViewController: UIViewController {
         }
         
         questionButton.enabled = true
-        
-        // this function will be placed into a tap to proceed action handler rather than auto advancing
-        // setQuestion()
     
     }
     
