@@ -24,8 +24,8 @@ class MultipleChoiceViewController: UIViewController {
     
     @IBAction func questionButtonHandler(sender: UIButton) {
     
-    
-    
+        setQuestion()
+        
     }
     
     
@@ -57,6 +57,9 @@ class MultipleChoiceViewController: UIViewController {
         
         if QuestionsList.count > 0 {
             
+            // Disable the question button. (Alertnatively place in viewDidLoad?)
+            questionButton.enabled = false
+            
             // Add a randomizer on this
             let QNumber = Int(arc4random_uniform(UInt32(QuestionsList.count)))
             
@@ -67,11 +70,15 @@ class MultipleChoiceViewController: UIViewController {
             //questionLabel.titleLabel!.lineBreakMode = .ByWordWrapping
             questionLabel.text = QuestionsList[QNumber].Question
             
+            // Set this out in an enumeration?
             for i in 0..<answerButtons.count {
             
                 // Check this method
                 // answerButtons[i].titleLabel!.lineBreakMode = .ByWordWrapping
                 answerButtons[i].setTitle(QuestionsList[QNumber].Answers![i], forState: UIControlState.Normal)
+                
+                answerButtons[i].enabled = true
+                answerButtons[i].backgroundColor = UIColor(red: 161/255, green: 228/255, blue: 231/255, alpha: 1)
             
             }
             
@@ -85,7 +92,7 @@ class MultipleChoiceViewController: UIViewController {
         
         } else {
         
-            // Do something at finish
+            // Do something at finish - load a New Game question, repopulate array, setQuestion() again
             print("No more questions")
         
         }
@@ -93,6 +100,8 @@ class MultipleChoiceViewController: UIViewController {
     }
     
     func checkAnswer(sender: UIButton) {
+        
+        answerButtons[correctAnswer].backgroundColor = UIColor.greenColor()
         
         if sender.tag == correctAnswer {
             
@@ -102,7 +111,11 @@ class MultipleChoiceViewController: UIViewController {
             
             print("Incorrect")
             
+            sender.backgroundColor = UIColor.redColor()
+            
         }
+        
+        questionButton.enabled = true
         
         // this function will be placed into a tap to proceed action handler rather than auto advancing
         // setQuestion()
