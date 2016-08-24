@@ -99,9 +99,10 @@ class MultipleChoiceViewController: UIViewController {
             
         
         } else {
-        
+            // This doesn't quite work - it doesn't execute after the last question, because the last question is count 1, but it won't know it is count 0 until you have presseed the next question button. Change to incorporate this into the answer check function
             // Do something at finish - load a New Game question, repopulate array, setQuestion() again
             print("No more questions")
+            backToMenu()
         
         }
         
@@ -124,6 +125,24 @@ class MultipleChoiceViewController: UIViewController {
         }
         
         questionButton.enabled = true
+        
+        if QuestionsList.count == 0 {
+        
+            // add a 2 second timer here - set up an NSTimer
+            backToMenu()
+            
+            // need to repopulate QuestionsList array
+            // Note - he is shuffling the array, he is not popping from it, so try that. It means your array always has items does't it? To cycle through it, you just keep moving the index number up by one.
+        
+        }
+    
+    }
+    
+    
+    
+    func backToMenu() {
+    
+        navigationController?.popToRootViewControllerAnimated(true)
     
     }
     
