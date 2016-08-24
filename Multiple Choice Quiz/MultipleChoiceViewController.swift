@@ -41,7 +41,8 @@ class MultipleChoiceViewController: UIViewController {
         if QuestionsList.count > 0 {
             
             // Add a randomizer on this
-            var QNumber = 0
+            let QNumber = Int(arc4random_uniform(UInt32(QuestionsList.count)))
+            print("QNumber = \(QNumber)")
             
             questionLabel.text = QuestionsList[QNumber].Question
             
