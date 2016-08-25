@@ -6,7 +6,10 @@
 //  Copyright © 2016 Jackson Taylor. All rights reserved.
 //
 
+// Note - system sounds are not working on the Simulator but do work on the device
+
 import UIKit
+import AudioToolbox
 
 class MultipleChoiceViewController: UIViewController {
 
@@ -43,7 +46,7 @@ class MultipleChoiceViewController: UIViewController {
     
     
     @IBAction func answerButtonHandler(sender: UIButton) {
-    
+        
         // Disable buttons after answer selection
         for button in answerButtons {
         
@@ -110,17 +113,23 @@ class MultipleChoiceViewController: UIViewController {
     
     func checkAnswer(sender: UIButton) {
         
+        // let url = NSURL.fileURLWithPath(NSBundle.mainBundle(path))
+        
         answerButtons[correctAnswer].backgroundColor = UIColor.greenColor()
         
         if sender.tag == correctAnswer {
             
             print("Correct")
             
+            AudioServicesPlaySystemSound(SystemSoundID(1001))
+            
         } else {
             
             print("Incorrect")
             
             sender.backgroundColor = UIColor.redColor()
+            
+            AudioServicesPlaySystemSound(SystemSoundID(1000))
             
         }
         
