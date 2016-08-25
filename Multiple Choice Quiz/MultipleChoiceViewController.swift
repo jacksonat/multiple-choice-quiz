@@ -82,7 +82,7 @@ class MultipleChoiceViewController: UIViewController {
             let currentQuestion = QuestionsList[QNumber]
             
             // increment the progress bar
-            progressView.progress += 1 / Float(QuestionsList.count)
+            // progressView.progress += 1 / Float(QuestionsList.count)
             
             // Disable the question button. (Alertnatively place in viewDidLoad?)
             questionButton.enabled = false
@@ -108,7 +108,7 @@ class MultipleChoiceViewController: UIViewController {
  
             }
             
-            // Set the correctAnswer 
+            // Set the correctAnswer
             correctAnswer = currentQuestion.Answer
             
         
@@ -116,6 +116,9 @@ class MultipleChoiceViewController: UIViewController {
             
             // Do something at finish - load a New Game question, repopulate array, setQuestion() again
             print("No more questions")
+            
+            // Should already have happened in question button handler but add for fail safety
+            backToMenu()
         
         }
         
@@ -152,6 +155,9 @@ class MultipleChoiceViewController: UIViewController {
             AudioServicesPlaySystemSound(SystemSoundID(1000))
             
         }
+        
+        // Change progress bar to here and not setQUestion()
+        progressView.progress += 1 / Float(QuestionsList.count)
         
         questionButton.enabled = true
         
