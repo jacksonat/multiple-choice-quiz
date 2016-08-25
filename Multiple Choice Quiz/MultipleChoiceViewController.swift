@@ -8,6 +8,8 @@
 
 // Note - system sounds are not working on the Simulator but do work on the device
 
+// Refactored code so you do not remove items from the array. Rather, grab the Question from the array at item n, assign that to a variable, then go through the rest of the array doing this by n++. This leaves the initial array in place, and you then just shuffle it on every new game.
+
 import UIKit
 import AudioToolbox
 
@@ -15,8 +17,10 @@ class MultipleChoiceViewController: UIViewController {
 
     var correctAnswer = Int()  // Initialize the correctAnswer
     
-    // var QNumber = 0
+    // Set a fixed QNumber, not random, because you are shuffling the array not the index
+    var QNumber = 0
     
+    // now redundant
     let initialQuestionCount = QuestionsList.count
     
     @IBOutlet weak var questionLabel: UILabel!
@@ -37,8 +41,6 @@ class MultipleChoiceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        
-        
         
         progressView.progress = 0
         
@@ -65,29 +67,30 @@ class MultipleChoiceViewController: UIViewController {
     
     func setQuestion() {
         
-        if QuestionsList.count > 0 {
+        if QNumber < QuestionsList.count {
+            
+            let currentQuestion = QuestionsList[QNumber]
             
             // increment the progress bar
-            progressView.progress += 1 / Float(initialQuestionCount)
+            progressView.progress += 1 / Float(QuestionsList.count)
             
             // Disable the question button. (Alertnatively place in viewDidLoad?)
             questionButton.enabled = false
             
-            // Add a randomizer on this
-            let QNumber = Int(arc4random_uniform(UInt32(QuestionsList.count)))
+            // Test on progress in the QuestionsList array
+            print("QNumber is \(QNumber), with \((QuestionsList.count - 1) - QNumber) questions left")
             
-            // Test on randomizer on QuestionsList array
-            print("QNumber is \(QNumber), with \(QuestionsList.count) questions left")
+            questionLabel.lineBreakMode = .ByWordWrapping  // put this in ViewDidLoad?
             
-            questionLabel.lineBreakMode = .ByWordWrapping
+            questionLabel.text = currentQuestion.Question
             
-            questionLabel.text = QuestionsList[QNumber].Question
             
+            // Consider changin this to a random number allocation. It can get too predictable where the answers are on repeat plays
             for (index, button) in answerButtons.enumerate() {
             
                 button.enabled = true
                 
-                button.setTitle(QuestionsList[QNumber].Answers![index], forState: UIControlState.Normal)
+                button.setTitle(currentQuestion.Answers![index], forState: UIControlState.Normal)  // refactor for safe unwrapping
                 
                 button.backgroundColor = UIColor(red: 161/255, green: 228/255, blue: 231/255, alpha: 1)
                 
@@ -95,15 +98,21 @@ class MultipleChoiceViewController: UIViewController {
  
             }
             
-        // Set the correctAnswer number before popping the question from array
-        correctAnswer = QuestionsList[QNumber].Answer
+            // Set the correctAnswer number before popping the question from array
+            correctAnswer = currentQuestion.Answer
             
-        // Remove the asked question from the array
-        QuestionsList.removeAtIndex(QNumber)  // You will need to reload the full array after the end of the game
+            // [DO NOT] Remove the asked question from the array
+            //QuestionsList.removeAtIndex(QNumber)  // You will need to reload the full array after the end of the game
             
+            // advance the QNumber
+            QNumber += 1
+            
+            // SHOULD EXPECT THE QS TO GO IN SEQUENCE and then repeat on a new game
+            // BUT WHEN IS GAME FINISHED AND HOW DOES THIS AFFECT PROGRESS BAR?
             
         
         } else {
+            
             // Do something at finish - load a New Game question, repopulate array, setQuestion() again
             print("No more questions")
         
@@ -119,7 +128,11 @@ class MultipleChoiceViewController: UIViewController {
         
         var mySound: SystemSoundID = 0
         
-        AudioServicesCreateSystemSoundID(soundUrl!, &mySound)
+        if soundUrl != nil {
+        
+            AudioServicesCreateSystemSoundID(soundUrl!, &mySound)
+            
+        }
         
         // let url = NSURL.fileURLWithPath(NSBundle.mainBundle(path))
         
@@ -143,7 +156,7 @@ class MultipleChoiceViewController: UIViewController {
         
         questionButton.enabled = true
         
-        if QuestionsList.count == 0 {
+        if QNumber == (QuestionsList.count - 1) {
         
             // add a 2 second timer here - set up an NSTimer
             backToMenu()
@@ -164,3 +177,36 @@ class MultipleChoiceViewController: UIViewController {
     }
     
 }
+
+// Refactor sounds with a Class:
+
+/*
+ 
+ 
+ 
+ With a class & AudioToolbox:
+ 
+ import AudioToolbox
+ 
+ class Sound {
+ 
+ var soundEffect: SystemSoundID = 0
+ init(name: String, type: String) {
+ let path  = NSBundle.mainBundle().pathForResource(name, ofType: type)!
+ let pathURL = NSURL(fileURLWithPath: path)
+ AudioServicesCreateSystemSoundID(pathURL as CFURLRef, &soundEffect)
+ }
+ 
+ func play() {
+ AudioServicesPlaySystemSound(soundEffect)
+ }
+ }
+ 
+ Usage:
+ 
+ testSound = Sound(name: "test", type: "caf")
+ testSound.play()
+ 
+
+ 
+ */
