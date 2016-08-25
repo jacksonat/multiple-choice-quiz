@@ -38,6 +38,8 @@ class MultipleChoiceViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
+        
+        
         progressView.progress = 0
         
         setQuestion()
@@ -102,16 +104,22 @@ class MultipleChoiceViewController: UIViewController {
             
         
         } else {
-            // This doesn't quite work - it doesn't execute after the last question, because the last question is count 1, but it won't know it is count 0 until you have presseed the next question button. Change to incorporate this into the answer check function
             // Do something at finish - load a New Game question, repopulate array, setQuestion() again
             print("No more questions")
-            backToMenu()
         
         }
         
     }
     
     func checkAnswer(sender: UIButton) {
+        
+        // I am having problems with scope. Can't add things like setting up the AudioServicesCreateSystemSoundID outside a function. Can't put it in viewDidLoad because I can't reach it from checkAnswer function. So have to put it here which means I am creating it every time I call this function
+        
+        let soundUrl = NSBundle.mainBundle().URLForResource("xylophone_affirm1", withExtension: "wav")
+        
+        var mySound: SystemSoundID = 0
+        
+        AudioServicesCreateSystemSoundID(soundUrl!, &mySound)
         
         // let url = NSURL.fileURLWithPath(NSBundle.mainBundle(path))
         
@@ -121,7 +129,7 @@ class MultipleChoiceViewController: UIViewController {
             
             print("Correct")
             
-            AudioServicesPlaySystemSound(SystemSoundID(1001))
+            AudioServicesPlaySystemSound(SystemSoundID(mySound))
             
         } else {
             
