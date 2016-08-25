@@ -33,7 +33,17 @@ class MultipleChoiceViewController: UIViewController {
     
     @IBAction func questionButtonHandler(sender: UIButton) {
     
-        setQuestion()
+        if QNumber < (QuestionsList.count - 1) {
+        
+            QNumber += 1
+            
+            setQuestion()
+            
+        } else {
+        
+            backToMenu()
+        
+        }
         
     }
     
@@ -98,17 +108,8 @@ class MultipleChoiceViewController: UIViewController {
  
             }
             
-            // Set the correctAnswer number before popping the question from array
+            // Set the correctAnswer 
             correctAnswer = currentQuestion.Answer
-            
-            // [DO NOT] Remove the asked question from the array
-            //QuestionsList.removeAtIndex(QNumber)  // You will need to reload the full array after the end of the game
-            
-            // advance the QNumber
-            QNumber += 1
-            
-            // SHOULD EXPECT THE QS TO GO IN SEQUENCE and then repeat on a new game
-            // BUT WHEN IS GAME FINISHED AND HOW DOES THIS AFFECT PROGRESS BAR?
             
         
         } else {
@@ -134,8 +135,6 @@ class MultipleChoiceViewController: UIViewController {
             
         }
         
-        // let url = NSURL.fileURLWithPath(NSBundle.mainBundle(path))
-        
         answerButtons[correctAnswer].backgroundColor = UIColor.greenColor()
         
         if sender.tag == correctAnswer {
@@ -156,16 +155,6 @@ class MultipleChoiceViewController: UIViewController {
         
         questionButton.enabled = true
         
-        if QNumber == (QuestionsList.count - 1) {
-        
-            // add a 2 second timer here - set up an NSTimer
-            backToMenu()
-            
-            // need to repopulate QuestionsList array
-            // Note - he is shuffling the array, he is not popping from it, so try that. It means your array always has items does't it? To cycle through it, you just keep moving the index number up by one.
-        
-        }
-    
     }
     
     
