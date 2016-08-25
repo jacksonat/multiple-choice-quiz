@@ -52,6 +52,8 @@ class MultipleChoiceViewController: UIViewController {
         
         progressView.progress = 0
         
+        QuestionsList.shuffle()
+        
         setQuestion()
         
         // Would set QNumber back to 0 here but it is happening on each load automatically in this code structure
