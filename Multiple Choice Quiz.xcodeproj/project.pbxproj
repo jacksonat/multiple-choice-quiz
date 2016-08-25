@@ -10,6 +10,7 @@
 		DB4D4C521D699FCD00274E5F /* MCQuestions.plist in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C511D699FCD00274E5F /* MCQuestions.plist */; };
 		DB4D4C571D69A61800274E5F /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C561D69A61800274E5F /* Configuration.swift */; };
 		DB4D4C591D6ED27500274E5F /* xylophone_affirm1.wav in Resources */ = {isa = PBXBuildFile; fileRef = DB4D4C581D6ED27500274E5F /* xylophone_affirm1.wav */; };
+		DB4D4C5B1D6F100A00274E5F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB4D4C5A1D6F100A00274E5F /* Extensions.swift */; };
 		DB6C81121D68100A003C0E3D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81111D68100A003C0E3D /* AppDelegate.swift */; };
 		DB6C81141D68100A003C0E3D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB6C81131D68100A003C0E3D /* ViewController.swift */; };
 		DB6C81171D68100A003C0E3D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DB6C81151D68100A003C0E3D /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 		DB4D4C511D699FCD00274E5F /* MCQuestions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = MCQuestions.plist; sourceTree = "<group>"; };
 		DB4D4C561D69A61800274E5F /* Configuration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
 		DB4D4C581D6ED27500274E5F /* xylophone_affirm1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = xylophone_affirm1.wav; sourceTree = "<group>"; };
+		DB4D4C5A1D6F100A00274E5F /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		DB6C810E1D68100A003C0E3D /* Multiple Choice Quiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Multiple Choice Quiz.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DB6C81111D68100A003C0E3D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DB6C81131D68100A003C0E3D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -85,6 +87,7 @@
 				DB6C81151D68100A003C0E3D /* Main.storyboard */,
 				DB6C81231D6818C3003C0E3D /* SettingsViewController.swift */,
 				DB6C81251D6818DA003C0E3D /* MultipleChoiceViewController.swift */,
+				DB4D4C5A1D6F100A00274E5F /* Extensions.swift */,
 				DB6C81271D6818EB003C0E3D /* RightOrWrongViewController.swift */,
 				DB6C81291D681917003C0E3D /* ImageViewController.swift */,
 				DB6C812B1D681924003C0E3D /* InputViewController.swift */,
@@ -171,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DB6C81141D68100A003C0E3D /* ViewController.swift in Sources */,
+				DB4D4C5B1D6F100A00274E5F /* Extensions.swift in Sources */,
 				DB6C81121D68100A003C0E3D /* AppDelegate.swift in Sources */,
 				DB6C81241D6818C3003C0E3D /* SettingsViewController.swift in Sources */,
 				DB6C812C1D681924003C0E3D /* InputViewController.swift in Sources */,

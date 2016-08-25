@@ -6,9 +6,7 @@
 //  Copyright © 2016 Jackson Taylor. All rights reserved.
 //
 
-// Note - system sounds are not working on the Simulator but do work on the device
-
-// Refactored code so you do not remove items from the array. Rather, grab the Question from the array at item n, assign that to a variable, then go through the rest of the array doing this by n++. This leaves the initial array in place, and you then just shuffle it on every new game.
+// TODO: Shuffle the array
 
 import UIKit
 import AudioToolbox
@@ -55,6 +53,8 @@ class MultipleChoiceViewController: UIViewController {
         progressView.progress = 0
         
         setQuestion()
+        
+        // Would set QNumber back to 0 here but it is happening on each load automatically in this code structure
         
     }
     
